@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Fredoka:wght@300..700&family=Itim&display=swap");
+
+:root {
+  --background-color: #000000;
+  --background-color-hover: #101010;
+  --font-color: white;
+  --font: "Itim", cursive;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--background-color);
+  overflow: hidden;
+}
+
+#blurred__background {
+  height: 95vh;
+  background-image: url(../Images/img-background.jpg);
+  background-size: contain;
+  background-position: center;
+  position: relative;
+  filter: blur(8px);
+}
+
+#intro__content h1 {
+  color: var(--font-color);
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  font-family: var(--font);
+  text-align: center;
+  font-size: 5rem;
+  width: 80%;
+}
+
+#intro__content button {
+  background-color: var(--background-color);
+  height: 5rem;
+  width: 18rem;
+  color: var(--font-color);
+  font-family: var(--font);
+  font-size: 1.5rem;
+  border-radius: 10px;
+  border: 1px solid white;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#intro__content button:hover {
+  background-color: var(--background-color-hover);
+  height: 5.1rem;
+  width: 18.1rem;
+}
+
+footer {
+  height: 5vh;
+  width: 100%;
+  background-color: var(--background-color);
+  color: var(--font-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer p {
+  font-size: 12px;
+}
+
+@media (max-width: 800px) {
+  #intro__content h1 {
+    font-size: 3rem;
+  }
+}

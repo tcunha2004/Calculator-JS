@@ -1,0 +1,92 @@
+:root {
+  --background-color: #000000;
+  --background-color-alt: #101010;
+  --font-color: white;
+  --font: "Itim", cursive;
+  --calculator-color: orange;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 95vh;
+  width: 100%;
+  background-color: var(--background-color);
+}
+
+#calculator {
+  height: 90%;
+  width: 80%;
+  background-color: var(--calculator-color);
+  border-radius: 20px;
+  position: relative;
+}
+
+#calculator__display {
+  position: absolute;
+  top: 3%;
+  left: 3%;
+  height: 15%;
+  width: 94%;
+  background-color: var(--background-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#calculator__display span {
+  color: var(--font-color);
+  font-size: x-large;
+}
+
+#calculator__numbers {
+  height: 75%;
+  width: 100%;
+  background-color: var(--calculator-color);
+  position: absolute;
+  top: 21%;
+  display: grid;
+  grid-template-columns: repeat(4, 23%);
+  grid-template-rows: repeat(5, 20%);
+  gap: 3px;
+  justify-content: center;
+}
+
+.calculator__buttons button{
+  background-color: var(--background-color);
+  color: var(--font-color);
+  border-radius: 30%;
+  border: 1px solid var(--background-color-alt);
+  font-size: larger;
+}
+
+.calculator__buttons:active {
+  background-color: var(--background-color-alt);
+}
+
+footer {
+  height: 5vh;
+  width: 100%;
+  background-color: var(--background-color);
+  color: var(--font-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer p {
+  font-size: 12px;
+}
+
+@media (max-width: 500px){
+  #calculator{
+    height: 70%;
+  }
+}
+
+@media (min-width: 600px){
+  #calculator__display span, .calculator__buttons button{
+    font-size: 45px;
+  }
+}
